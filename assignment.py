@@ -1,15 +1,11 @@
-number_1= eval(input("Enter number 1:"))
-number_2= eval(input("Enter number 2:"))
-print ("1)addition 2)subtraction 3)multiplication 4)division")
-j= eval(input("insert operator given above 1-4 :"))
+j=open('C:/Users/LENOVO/OneDrive/Desktop/textdoctime.txt',"r")
+scanned=j.read()
+cut=scanned.split()
 
-if j==4  :
-    print(number_1/number_2)
-elif j==3  :
-    print(number_1*number_2)
-elif j==2:
-    print(number_1-number_2)
-elif j==1:
-    print(number_1+number_2)
-else:
-    print("operator doesnt exist")
+counted={}
+for word in cut:
+    counted[word]=counted.get(word,0)+1
+
+for key,value in counted.items():
+    if value ==1:
+        print(key)
