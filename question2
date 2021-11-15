@@ -1,9 +1,0 @@
-textread=open('worded.txt','r')
-tetxwritten=open('newtext.txt','w')
-
-sentence=textread.read().split("\n")
-numberlines= 1
-
-for line in sentence:
-    tetxwritten.write(str(numberlines)+ " "+ line+ "\n")
-    numberlines= numberlines+1
